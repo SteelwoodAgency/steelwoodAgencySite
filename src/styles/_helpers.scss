@@ -1,0 +1,152 @@
+//------------------
+// HELPER CLASSES
+//------------------
+@import '../styles/_variables.scss';
+
+.max-width {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.desktop-width {
+  max-width: $desktop;
+  margin: 0 auto;
+}
+
+.tablet-width {
+  max-width: $tablet;
+  margin: 0 auto;
+}
+
+.full-width {
+  width: 100%;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+//overlay
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $overlay;
+  z-index: 6;
+  // animation: fadeIn 0.5s;
+}
+
+.gray-bg {
+  background: $gray-x-light;
+}
+
+//window stop scroll
+.no-scroll {
+  overflow: hidden;
+}
+
+.no-margin {
+  margin-bottom: 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.secondary-font {
+  font-family: $secondary-font;
+}
+
+.left-text {
+  text-align: left;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.right-text {
+  text-align: right;
+}
+
+.invert {
+  background: $black;
+  color: $white;
+}
+
+.hide {
+  display: none;
+}
+
+//global errors
+.errors {
+  ul {
+    color: $red;
+  }
+}
+
+.left-align {
+  text-align: left;
+  display: block;
+  margin-left: 0;
+}
+
+.center-align {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.right-align {
+  display: block;
+  margin-right: 0;
+  text-align: left;
+
+  @media(min-width: $tablet) {
+    text-align: right;
+  }
+}
+
+//responsive youtube videos
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.two-column {
+  display: grid;
+  grid-gap: 1.25em;
+
+  @media(min-width: $tablet) {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-gap: 4em;
+  }
+}

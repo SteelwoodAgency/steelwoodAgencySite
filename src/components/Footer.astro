@@ -1,0 +1,31 @@
+<footer>
+  <div class="footer-wrapper">
+    <p>© {new Date().getFullYear()} Steelwood Agency. All right reserved.</p>
+    <p><a href="mailto:steelwoodagency@gmail.com" target="_blank">steelwoodagency@gmail.com</a></p>
+  </div>
+</footer>
+
+<style lang="scss">
+@import '../styles/_variables.scss';
+
+footer {
+  border-top: 1px solid $gray;
+
+  .footer-wrapper {
+    padding: 2em 1.25em;
+    text-align: center;
+
+    * {
+      color: $black;
+    }
+
+    @media(min-width: $tablet) {
+      padding: 2em 6em;
+    }
+
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+</style>

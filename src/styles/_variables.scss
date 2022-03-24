@@ -1,0 +1,57 @@
+//------------------
+// FONT
+//------------------
+$primary-font: Helvetica;
+$secondary-font: Helvetica;
+$font-family: $primary-font, sans-serif;
+
+//------------------
+// BREAKPOINTS
+//------------------
+$mobile: 550px;
+$tablet: 768px;
+$desktop: 1024px;
+$max-width: 1400px;
+
+// custom
+$constrain: 630px;
+
+//------------------
+// COLORS
+//------------------
+$white: #ffffff;
+$black: #000000;
+$black-transparent: rgba($black, 0.75);
+$overlay: rgba($black, 0.4);
+$red: #e85555;
+$dark-blue: #050d3c;
+$blue: #253140;
+$light-blue: #c3edef;
+$light-blue-transparent: rgba($light-blue, 0.75);
+$green: #7ad03a;
+$gray-x-dark: #676767;
+$gray-dark: #9B9B9B;
+$gray: #e2e2e2;
+$gray-light: #f0f0f0;
+$gray-x-light: #f7f7f7;
+$white: #ffffff;
+
+//------------------
+// SHADOWS
+//------------------
+$shadow: 0px 2px 40px rgba($black, 0.08);
+
+//------------------
+// IMAGE FILTER COLORS
+// https://codepen.io/sosuke/pen/Pjoqqp
+//------------------
+$white-filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+$black-filter: brightness(0) saturate(100%);
+$gray-filter: $black-filter invert(76%) sepia(5%) saturate(45%) hue-rotate(201deg) brightness(94%) contrast(93%);
+
+
+//------------------
+//COLOR ALIASES
+//------------------
+$main-color: $black;
+$body-color: $black;

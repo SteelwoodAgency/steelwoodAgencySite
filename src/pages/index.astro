@@ -1,0 +1,97 @@
+---
+import "../styles/Global.scss";
+
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Footer from '../components/Footer.astro';
+
+let title = 'Community Of Technology';
+let description = 'A small group of experts that have a proven track record of creating online presences and improving existing ones in a multi-faceted way.';
+let permalink = 'https://steelwood-agency.netlify.app/';
+---
+  
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} permalink={permalink} />
+  </head>
+
+  <body>
+    <Header />
+    <Hero />
+    <div class="homepage-block">
+      <div class="center-text desktop-width">
+        <h1>Who We Are</h1>
+        <p class="no-margin">{description}</p>
+      </div>
+    </div>
+    <div class="homepage-block">
+      <div class="two-column desktop-width">
+        <div>
+          <img src="programming.jpg" alt="Services Image" />
+        </div>
+        <div>
+          <h2>What We Do</h2>
+          <p>We provide a wide range of services that include, but are not limited to:</p>
+          <ul>
+            <li>Custom Site Builds</li>
+            <li>Existing Site Feature Development</li>
+            <li>Existing Site Maintenace</li>
+            <li>Custom App Development</li>
+            <li>Analytics</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="homepage-block">
+      <div class="two-column desktop-width">
+        <div>
+          <h2>Our Products</h2>
+          <p>Currently we have a Shopify app, Tiered Up, which provides a wide range of tiered customer goal configurations for Shopify Stores.</p>
+          <a href="#" target="_blank">Check it out!</a>
+        </div>
+        <div>
+          <img src="tiered-up.png" alt="Tiered Up" />
+        </div>
+      </div>
+    </div>
+    <div class="homepage-block">
+      <div class="center-text desktop-width">
+        <h2>Work With Us</h2>
+        <p>Since we are a small group, we take clients on very selectively. If you think we'd be a good fit for your business, please reach out!</p>
+        <a href="mailto:steelwoodagency@gmail.com" target="_blank">Contact Us</a>
+      </div>
+    </div>
+    <Footer />
+  </body>
+</html>
+
+<style lang="scss">
+@import '../styles/_variables.scss';
+
+.homepage-block {
+  padding: 2em 1.25em;
+
+  @media(min-width: $tablet) {
+    padding: 6em 1.25em;
+  }
+
+  &:nth-of-type(2n+1) {
+    background: $blue;
+    
+    * {
+      color: $light-blue;
+    }
+  }
+
+  ul {
+    display: block;
+    margin: 0 auto;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>

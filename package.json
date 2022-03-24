@@ -1,0 +1,15 @@
+{
+  "name": "steelwood-agency",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build --experimental-static-build",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "astro": "^0.23.3",
+    "sass": "^1.49.9"
+  }
+}

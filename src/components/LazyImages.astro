@@ -1,0 +1,42 @@
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  if ('loading' in HTMLImageElement.prototype) {
+    var lazyImages = document.querySelectorAll('img');
+      
+    for (var img of lazyImages) {
+      if (!img.complete) {
+        img.classList.add('lazyImageWaiting');
+        img.addEventListener('load', lazyImageLoad, false);
+        img.addEventListener('error', lazyImageError, false);
+      }
+    }
+    
+    function lazyImageLoad(e) {
+      e.currentTarget.classList.remove('lazyImageWaiting');
+    }
+    
+    function lazyImageError(e) {
+      var parent = e.currentTarget.parentNode;
+      parent.classList.remove('lazyImageWaiting');
+      parent.classList.add('lazyImageError');
+      setTimeout(function() {
+        parent.classList.add('lazyImageErrorShow');
+      }, 60);
+    }
+    
+  }
+})
+</script>
+
+<style global>
+img {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+img.lazyImageError,
+img.lazyImageWaiting {
+  opacity: 0;
+}
+</style>
