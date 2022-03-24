@@ -38,7 +38,6 @@ Check out all these sick technologies:
 
 - [Vite](https://vitejs.dev/)
 - [Astro](https://astro.build/)
-- [Imgix](https://imgix.com/)
 - [Sass](https://github.com/sass/sass)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Netlify](https://www.netlify.com/)
