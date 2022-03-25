@@ -1,6 +1,6 @@
 <footer>
   <div class="footer-wrapper">
-    <p>© {new Date().getFullYear()} Steelwood Agency. All right reserved.</p>
+    <p>© {new Date().getFullYear()} Steelwood Agency.</p>
     <p><a href="mailto:steelwoodagency@gmail.com" target="_blank">steelwoodagency@gmail.com</a></p>
   </div>
 </footer>
@@ -12,6 +12,9 @@ footer {
   border-top: 1px solid $gray;
 
   .footer-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     padding: 2em 1.25em;
     text-align: center;
 

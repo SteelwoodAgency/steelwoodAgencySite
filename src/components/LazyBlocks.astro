@@ -1,0 +1,30 @@
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const lazyBlocks = document.querySelectorAll('.lazy-block');
+  for (const block of lazyBlocks) {
+    block.classList.add('lazyBlockWaiting');
+    
+    const callback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove('lazyBlockWaiting')
+        }
+      })
+    }
+    const myObserver = new IntersectionObserver(callback, {})
+    myObserver.observe(block)
+  }
+})
+</script>
+
+<style global>
+.lazy-block {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.lazy-block.lazyBlockWaiting {
+  opacity: 0;
+}
+</style>

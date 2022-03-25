@@ -1,7 +1,7 @@
 //------------------
 // FONT
 //------------------
-$primary-font: Helvetica;
+$primary-font: 'DM Sans', sans-serif;
 $secondary-font: Helvetica;
 $font-family: $primary-font, sans-serif;
 
@@ -35,6 +35,9 @@ $gray: #e2e2e2;
 $gray-light: #f0f0f0;
 $gray-x-light: #f7f7f7;
 $white: #ffffff;
+
+$primary-color: $blue;
+$secondary-color: $light-blue;
 
 //------------------
 // SHADOWS

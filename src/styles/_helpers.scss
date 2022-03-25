@@ -18,6 +18,11 @@
   margin: 0 auto;
 }
 
+.mobile-width {
+  max-width: $mobile;
+  margin: 0 auto;
+}
+
 .full-width {
   width: 100%;
 }
