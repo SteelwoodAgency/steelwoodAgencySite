@@ -21,10 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
 <style global>
 .lazy-block {
   opacity: 1;
-  transition: opacity 1s;
+  transition: opacity 1s, transform 1s;
 }
 
 .lazy-block.lazyBlockWaiting {
   opacity: 0;
+  transform: translateY(5%);
 }
 </style>

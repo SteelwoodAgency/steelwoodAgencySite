@@ -32,11 +32,12 @@ document.addEventListener('DOMContentLoaded', () => {
 <style global>
 img {
   opacity: 1;
-  transition: opacity 1s;
+  transition: opacity 1s, transform 1s;
 }
 
 img.lazyImageError,
 img.lazyImageWaiting {
   opacity: 0;
+  transform: translateY(5%);
 }
 </style>
