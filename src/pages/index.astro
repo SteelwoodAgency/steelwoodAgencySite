@@ -48,14 +48,14 @@ let permalink = 'https://steelwood-agency.netlify.app/';
         <h1>How We Do It</h1>
         <p>Our multi-faceted approach includes four specific areas of focus:</p>
         <ol class="no-margin left-text">
-          <li class="lazy-block">Performance</li>
-          <li class="lazy-block">User Experience</li>
-          <li class="lazy-block">Continued Engagement</li>
-          <li class="lazy-block">Tracking & Analytics</li>
+          <li class="lazy-block delay-1">Performance</li>
+          <li class="lazy-block delay-2">User Experience</li>
+          <li class="lazy-block delay-3">Continued Engagement</li>
+          <li class="lazy-block delay-4">Tracking & Analytics</li>
         </ol>
       </div>
     </div>
-    <div class="homepage-block lazy-block">
+    <div class="homepage-block lazy-block delay-1">
       <div class="two-column tablet-width">
         <div>
           <h2>Our Products</h2>
@@ -67,7 +67,7 @@ let permalink = 'https://steelwood-agency.netlify.app/';
         </div>
       </div>
     </div>
-    <div class="homepage-block lazy-block">
+    <div class="homepage-block lazy-block delay-1">
       <div class="center-text mobile-width">
         <h2>Work With Us</h2>
         <p>Since we are a small group, we take clients on very selectively. If you think we'd be a good fit for your business, please reach out!</p>
@@ -109,7 +109,7 @@ let permalink = 'https://steelwood-agency.netlify.app/';
     align-items: center;
     justify-content: center;
     gap: 2.5em;
-    padding: 1.25em;
+    padding: 1.25em 0 0;
     margin: 0;
     list-style-type: none;
     counter-reset: li;
@@ -118,9 +118,19 @@ let permalink = 'https://steelwood-agency.netlify.app/';
     @media(min-width: $mobile) {
       align-items: flex-start;
       flex-flow: row;
+      gap: 1.25em;
+    }
+
+    @media(min-width: $tablet) { 
+      padding: 1.25em;
+      gap: 2.5em;
     }
 
     li {
+      @media(max-width: $mobile - 1) {
+        margin: 0;
+      }
+
       &:before {
         content: counter(li);
         counter-increment: li;

@@ -18,14 +18,32 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 </script>
 
-<style global>
+<style lang="scss" global>
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(5%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .lazy-block {
-  opacity: 1;
-  transition: opacity 1s, transform 1s;
+  opacity: 0;
+  animation: fadeUp 0.5s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
 }
 
 .lazy-block.lazyBlockWaiting {
   opacity: 0;
-  transform: translateY(5%);
+}
+
+@for $i from 1 to 10 {
+  .lazy-block.delay-#{$i} { 
+    animation-delay: ($i * 0.5s) + 0.5s;
+  }
 }
 </style>
